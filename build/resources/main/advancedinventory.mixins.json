@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.zanckor.advancedinventory.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "advancedinventory.refmap.json",
+  "mixins": [
+    "inventory.MixinInventoryContainer",
+    "inventory.MixinInventoryMenu"
+  ],
+  "client": [
+    "inventory.MixinInventoryScreen"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

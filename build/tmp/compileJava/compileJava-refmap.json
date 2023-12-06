@@ -1,0 +1,24 @@
+{
+  "mappings": {
+    "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen": {
+      "renderBg": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7286_(Lnet/minecraft/client/gui/GuiGraphics;FII)V"
+    },
+    "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer": {
+      "load": "Lnet/minecraft/world/entity/player/Inventory;m_36035_(Lnet/minecraft/nbt/ListTag;)V",
+      "save": "Lnet/minecraft/world/entity/player/Inventory;m_36026_(Lnet/minecraft/nbt/ListTag;)Lnet/minecraft/nbt/ListTag;",
+      "setItem": "Lnet/minecraft/world/entity/player/Inventory;m_6836_(ILnet/minecraft/world/item/ItemStack;)V"
+    }
+  },
+  "data": {
+    "searge": {
+      "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen": {
+        "renderBg": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7286_(Lnet/minecraft/client/gui/GuiGraphics;FII)V"
+      },
+      "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer": {
+        "load": "Lnet/minecraft/world/entity/player/Inventory;m_36035_(Lnet/minecraft/nbt/ListTag;)V",
+        "save": "Lnet/minecraft/world/entity/player/Inventory;m_36026_(Lnet/minecraft/nbt/ListTag;)Lnet/minecraft/nbt/ListTag;",
+        "setItem": "Lnet/minecraft/world/entity/player/Inventory;m_6836_(ILnet/minecraft/world/item/ItemStack;)V"
+      }
+    }
+  }
+}

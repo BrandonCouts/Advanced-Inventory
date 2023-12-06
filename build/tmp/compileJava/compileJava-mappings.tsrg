@@ -1,0 +1,9 @@
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer compartments f_35979_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer items f_35974_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer armor f_35975_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer offhand f_35976_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu craftSlots f_39701_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu resultSlots f_39702_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu owner f_39703_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen xMouse f_98831_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen yMouse f_98832_
