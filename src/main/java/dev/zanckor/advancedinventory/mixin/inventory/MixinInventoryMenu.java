@@ -1,5 +1,7 @@
 package dev.zanckor.advancedinventory.mixin.inventory;
 
+import dev.zanckor.advancedinventory.common.network.SendQuestPacket;
+import dev.zanckor.advancedinventory.common.network.packet.MoveSlot;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Inventory;
@@ -18,7 +20,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(InventoryMenu.class)
 public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
-
     @Shadow
     @Final
     private CraftingContainer craftSlots;
@@ -29,7 +30,6 @@ public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     @Final
     private Player owner;
 
-    private int scrollAmount = 0;
 
     public MixinInventoryMenu(MenuType<?> menuType, int i) {
         super(menuType, i);
@@ -47,8 +47,8 @@ public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
         int slotsTranslated = 0;
 
         switch (clickType) {
-            case UP_SCROLL -> slotsTranslated = increaseScrollAmount(1) ? 9 : 0;
-            case DOWN_SCROLL -> slotsTranslated = increaseScrollAmount(-1) ? -9  : 0;
+            case UP_SCROLL -> slotsTranslated = -9;
+            case DOWN_SCROLL -> slotsTranslated = 9;
         }
 
         moveSlots(slotsTranslated);
@@ -56,49 +56,13 @@ public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
         return super.clickMenuButton(player, clickType);
     }
 
-    public boolean increaseScrollAmount(int amount) {
-        int finalScrollAmount = scrollAmount + amount;
-
-        if(finalScrollAmount >= 1 && finalScrollAmount <= 3){
-            scrollAmount = finalScrollAmount;
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public void moveSlots(int amount) {
-        InventoryMenu inventoryMenu = ((InventoryMenu) (Object) this);
-
-        for(int row = 0; row < 3; ++row){
-            int slot = row * 9 + 9;
-
-            Slot previousSlot = inventoryMenu.getSlot(slot);
-            Slot nextSlot = inventoryMenu.getSlot(slot + amount);
-
-            ItemStack previousSlotItem = previousSlot.getItem();
-            ItemStack nextSlotItem = nextSlot.getItem();
-
-            nextSlot.set(previousSlotItem);
-            previousSlot.set(nextSlotItem);
-        }
-
-        /*
-        for (int row = 0; row < 3; ++row) {
-            int index = row * 9 + 9;
-            Slot slot = inventoryMenu.getSlot(index);
-            inventoryMenu.getSlot((row + scrollAmount) * 9).set(slot.getItem());
-
-            System.out.println("Index: " + index + " New Index: " + ((row + scrollAmount) * 9));
-        }
-         */
+        SendQuestPacket.TO_SERVER(new MoveSlot(amount));
     }
 
 
     @Override
     public void clicked(int p_150400_, int p_150401_, ClickType p_150402_, Player p_150403_) {
-        System.out.println(p_150400_);
-
         super.clicked(p_150400_, p_150401_, p_150402_, p_150403_);
     }
 

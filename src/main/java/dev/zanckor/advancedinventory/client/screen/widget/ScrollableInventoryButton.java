@@ -14,7 +14,7 @@ public class ScrollableInventoryButton extends AbstractButton {
     private static final ResourceLocation BUTTON = new ResourceLocation(MODID, "textures/gui/button/scroll_button.png");
     private static final int imageWidth = 4;
     private static final int imageHeight = 11;
-    private InventoryMenu MENU;
+    private final InventoryMenu MENU;
 
 
     public ScrollableInventoryButton(int x, int y, int width, int height, InventoryMenu menu) {

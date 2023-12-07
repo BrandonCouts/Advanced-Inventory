@@ -26,6 +26,7 @@ public class MixinInventoryContainer {
     @Shadow @Final public NonNullList<ItemStack> items;
     @Shadow @Final public NonNullList<ItemStack> armor;
     @Shadow @Final public NonNullList<ItemStack> offhand;
+    @Shadow @Final public Player player;
     public NonNullList<ItemStack> extraSlots;
 
 

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/advancedinventory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/advancedinventory.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/advancedinventory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/advancedinventory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dev.zanckor.advancedinventory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/dev.zanckor.advancedinventory.test.iml" />
     </modules>
   </component>
 </project>
