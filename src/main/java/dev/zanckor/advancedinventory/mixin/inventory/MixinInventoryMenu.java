@@ -2,6 +2,8 @@ package dev.zanckor.advancedinventory.mixin.inventory;
 
 import dev.zanckor.advancedinventory.common.network.SendQuestPacket;
 import dev.zanckor.advancedinventory.common.network.packet.MoveSlot;
+import dev.zanckor.advancedinventory.core.data.InventoryData;
+import dev.zanckor.advancedinventory.core.inventory.slot.AvailableSlot;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Inventory;
@@ -38,6 +40,12 @@ public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     @SuppressWarnings("all")
     @Inject(method = "<init>", at = @At("TAIL"))
     public void constructor(Inventory inventory, boolean bl, Player player, CallbackInfo ci) {
+        for (int slot = 0; slot < 900; ++slot) { // TODO: 900 with config
+            boolean isAvailable = slot < 9; // TODO: Change with config. This is the number of available slots
+            AvailableSlot availableSlot = new AvailableSlot(inventory, InventoryData.getExtraInvSlotStart() + slot, -1000000, -1000000, isAvailable, player);
+
+            addSlot(availableSlot);
+        }
     }
 
     @Override

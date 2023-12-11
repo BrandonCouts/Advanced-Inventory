@@ -21,46 +21,46 @@ import java.util.List;
 
 @Mixin(Inventory.class)
 public class MixinInventoryContainer {
-    @Mutable
-    @Shadow @Final private List<NonNullList<ItemStack>> compartments;
-    @Shadow @Final public NonNullList<ItemStack> items;
-    @Shadow @Final public NonNullList<ItemStack> armor;
-    @Shadow @Final public NonNullList<ItemStack> offhand;
-    @Shadow @Final public Player player;
-    public NonNullList<ItemStack> extraSlots;
 
+    @Mutable
+    @Shadow
+    @Final
+    private List<NonNullList<ItemStack>> compartments;
+    @Shadow
+    @Final
+    public NonNullList<ItemStack> items;
+    @Shadow
+    @Final
+    public NonNullList<ItemStack> armor;
+    @Shadow
+    @Final
+    public NonNullList<ItemStack> offhand;
+    public NonNullList<ItemStack> extraSlot;
 
     @Inject(method = "<init>", at = @At("TAIL"))
     public void init(Player player, CallbackInfo ci) {
-        extraSlots = NonNullList.withSize(900, ItemStack.EMPTY);
-        compartments = ImmutableList.of(items, armor, offhand, extraSlots);
+        extraSlot = NonNullList.withSize(5 + 900, ItemStack.EMPTY); // TODO: Change 900 with config
+        compartments = ImmutableList.of(items, armor, offhand, extraSlot);
     }
 
-    @Inject(method = "setItem", at = @At("TAIL"))
-    public void setItem(int slot, ItemStack itemStack, CallbackInfo ci) {
-        if(slot >= 41) {
-            extraSlots.set(slot, itemStack);
-        }
-    }
-
-    @Inject(method = "save", at = @At("HEAD"))
+    @Inject(method = "save", at = @At("TAIL"))
     private void save(ListTag listTag, CallbackInfoReturnable<ListTag> cir) {
-        for (int slotIndex = 0, extraSlotSize = extraSlots.size(); slotIndex < extraSlotSize; slotIndex++) {
-            ItemStack itemStack = extraSlots.get(slotIndex);
+        for (int slotIndex = 0, extraSlot = this.extraSlot.size(); slotIndex < extraSlot; slotIndex++) {
+            ItemStack itemStack = this.extraSlot.get(slotIndex);
 
             if (!itemStack.isEmpty()) {
                 CompoundTag compoundTag = new CompoundTag();
                 compoundTag.putByte("Slot", (byte) (slotIndex + 200));
 
-                extraSlots.get(slotIndex).save(compoundTag);
+                this.extraSlot.get(slotIndex).save(compoundTag);
                 listTag.add(compoundTag);
             }
         }
     }
 
-    @Inject(method = "load", at = @At("HEAD"))
+    @Inject(method = "load", at = @At("TAIL"))
     private void load(ListTag listTag, CallbackInfo ci) {
-        extraSlots.clear();
+        extraSlot.clear();
 
         for (int listTagIndex = 0; listTagIndex < listTag.size(); listTagIndex++) {
             CompoundTag compoundTag = listTag.getCompound(listTagIndex);
@@ -68,8 +68,8 @@ public class MixinInventoryContainer {
             ItemStack itemStack = ItemStack.of(compoundTag);
 
             if (!itemStack.isEmpty()) {
-                if (slot >= 200 && slot < extraSlots.size() + 200) {
-                    extraSlots.set(slot - 200, itemStack);
+                if (slot >= 200 && slot < extraSlot.size() + 200) {
+                    extraSlot.set(slot - 200, itemStack);
                 }
             }
         }

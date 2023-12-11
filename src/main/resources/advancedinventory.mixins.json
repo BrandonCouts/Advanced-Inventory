@@ -5,10 +5,13 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "advancedinventory.refmap.json",
   "mixins": [
+    "inventory.ContainerMixin",
+    "inventory.ItemMixin",
     "inventory.MixinInventoryContainer",
     "inventory.MixinInventoryMenu"
   ],
   "client": [
+    "inventory.TextItemRendererMixin",
     "inventory.MixinInventoryScreen"
   ],
   "injectors": {

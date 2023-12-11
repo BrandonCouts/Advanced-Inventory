@@ -25,7 +25,7 @@ public class MoveSlot {
 
     public static void handler(MoveSlot msg, Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
-            ServerHandler.moveSlots(msg.movementAmount, Objects.requireNonNull(ctx.get().getSender()));
+            ServerHandler.translateInventorySlots(msg.movementAmount, Objects.requireNonNull(ctx.get().getSender()));
         });
 
         ctx.get().setPacketHandled(true);
