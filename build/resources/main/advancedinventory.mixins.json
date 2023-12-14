@@ -11,8 +11,8 @@
     "inventory.MixinInventoryMenu"
   ],
   "client": [
-    "inventory.TextItemRendererMixin",
-    "inventory.MixinInventoryScreen"
+    "inventory.MixinInventoryScreen",
+    "inventory.TextItemRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

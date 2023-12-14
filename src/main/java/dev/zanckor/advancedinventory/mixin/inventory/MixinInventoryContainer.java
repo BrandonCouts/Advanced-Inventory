@@ -39,7 +39,7 @@ public class MixinInventoryContainer {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     public void init(Player player, CallbackInfo ci) {
-        extraSlot = NonNullList.withSize(5 + 900, ItemStack.EMPTY); // TODO: Change 900 with config
+        extraSlot = NonNullList.withSize(929, ItemStack.EMPTY); // TODO: Change 900 with config
         compartments = ImmutableList.of(items, armor, offhand, extraSlot);
     }
 

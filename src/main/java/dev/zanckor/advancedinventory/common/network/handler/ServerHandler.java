@@ -1,8 +1,9 @@
 package dev.zanckor.advancedinventory.common.network.handler;
 
 import dev.zanckor.advancedinventory.core.data.InventoryData;
+import dev.zanckor.advancedinventory.util.MCUtil;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 
 import static net.minecraft.world.inventory.InventoryMenu.INV_SLOT_END;
@@ -14,9 +15,9 @@ public class ServerHandler {
         int extraInvSlotStart = InventoryData.getExtraInvSlotStart();
         int extraInvSlotEnd = InventoryData.getExtraInvSlotEnd(player);
 
-        ItemStack[] slotsBackup = copyInventory(player);
-        clearSlots(player, INV_SLOT_START, INV_SLOT_END);
-        clearSlots(player, extraInvSlotStart, extraInvSlotEnd);
+        ItemStack[] slotsBackup = MCUtil.copyInventory(player);
+        MCUtil.clearSlots(player, INV_SLOT_START, INV_SLOT_END);
+        MCUtil.clearSlots(player, extraInvSlotStart, extraInvSlotEnd);
 
         for (int slotIndex = INV_SLOT_START; slotIndex < extraInvSlotEnd; ++slotIndex) {
             if (slotIndex == INV_SLOT_END) {
@@ -47,20 +48,9 @@ public class ServerHandler {
         }
     }
 
-    public static ItemStack[] copyInventory(Player player) {
-        ItemStack[] slotsBackup = new ItemStack[player.containerMenu.slots.size()].clone();
-        AbstractContainerMenu containerMenu = player.inventoryMenu;
+    public static void searchItemText(String text, ServerPlayer player) {
+        int slotIndexStart = InventoryData.getExtraInvSlotStart() + 900; // TODO: Change this to config
 
-        for (int realInventorySlotIndex = 0; realInventorySlotIndex < containerMenu.slots.size(); realInventorySlotIndex++) {
-            slotsBackup[realInventorySlotIndex] = containerMenu.slots.get(realInventorySlotIndex).getItem().copy();
-        }
-
-        return slotsBackup;
-    }
-
-    public static void clearSlots(Player player, int startSlot, int endSlot) {
-        for (int slotIndex = startSlot; slotIndex < endSlot; slotIndex++) {
-            player.getInventory().setItem(slotIndex, ItemStack.EMPTY);
-        }
+        MCUtil.shortSlotsByItem(player, text, slotIndexStart, 9, InventoryData.getExtraInvSlotEnd(player), 15);
     }
 }

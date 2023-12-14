@@ -7,9 +7,8 @@ import net.minecraft.world.entity.player.Player;
 import static dev.zanckor.advancedinventory.AdvancedInventory.MODID;
 
 public class InventoryData {
-    public static final int MAX_STACK_SIZE = 1000000000;
-
-    private static final int EXTRA_INVENTORY_SLOT = 46;
+    public static final int MAX_STACK_SIZE = 1000; // TODO: Change with config
+    private static final int EXTRA_INVENTORY_SLOT = 55;
 
     public static int getExtraInvSlotStart() {
         return EXTRA_INVENTORY_SLOT;

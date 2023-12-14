@@ -4,7 +4,6 @@ import dev.zanckor.advancedinventory.core.data.InventoryData;
 import dev.zanckor.advancedinventory.core.inventory.slot.AvailableSlot;
 import dev.zanckor.advancedinventory.util.MCUtil;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -23,7 +22,7 @@ public class SlotIncreaser extends Item {
             // Change the next 9 slots to be extra inventory slots
             for (int slotIndex = InventoryData.getExtraInvSlotEnd(player); slotIndex < InventoryData.getExtraInvSlotEnd(player) + 9; slotIndex++) {
                 AvailableSlot slot = (AvailableSlot) player.containerMenu.slots.get(slotIndex);
-                slot.setAvailable(true);
+                slot.setAvailable(false);
             }
 
             InventoryData.increaseExtraInvSlotStart(9, player);

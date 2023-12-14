@@ -1,9 +1,11 @@
 package dev.zanckor.advancedinventory.mixin.inventory;
 
-import dev.zanckor.advancedinventory.common.network.SendQuestPacket;
+import dev.zanckor.advancedinventory.common.network.SendPacket;
 import dev.zanckor.advancedinventory.common.network.packet.MoveSlot;
 import dev.zanckor.advancedinventory.core.data.InventoryData;
 import dev.zanckor.advancedinventory.core.inventory.slot.AvailableSlot;
+import dev.zanckor.advancedinventory.core.inventory.slot.SearchSlot;
+import net.minecraft.world.Container;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.player.Inventory;
@@ -21,7 +23,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(InventoryMenu.class)
-public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
+public abstract class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     @Shadow
     @Final
     private CraftingContainer craftSlots;
@@ -33,6 +35,8 @@ public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     private Player owner;
 
 
+    @Shadow public abstract void slotsChanged(Container p_39710_);
+
     public MixinInventoryMenu(MenuType<?> menuType, int i) {
         super(menuType, i);
     }
@@ -40,11 +44,33 @@ public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     @SuppressWarnings("all")
     @Inject(method = "<init>", at = @At("TAIL"))
     public void constructor(Inventory inventory, boolean bl, Player player, CallbackInfo ci) {
-        for (int slot = 0; slot < 900; ++slot) { // TODO: 900 with config
+        int startIndexHotbar = InventoryData.getExtraInvSlotStart() - 9;
+        int extraSlotSize = 900; // TODO: 900 with config
+
+        for (int extraHotbarSlot = 0; extraHotbarSlot < 9; ++extraHotbarSlot) {
+            int xPos = 8 + extraHotbarSlot * 18;
+            int yPos = 160;
+            int slotIndex = startIndexHotbar + extraHotbarSlot;
+
+            addSlot(new AvailableSlot(inventory, startIndexHotbar + extraHotbarSlot, xPos, yPos, true, player));
+        }
+
+        for (int slot = 0; slot < extraSlotSize; ++slot) {
             boolean isAvailable = slot < 9; // TODO: Change with config. This is the number of available slots
-            AvailableSlot availableSlot = new AvailableSlot(inventory, InventoryData.getExtraInvSlotStart() + slot, -1000000, -1000000, isAvailable, player);
+            int slotIndex = InventoryData.getExtraInvSlotStart() + slot;
+            AvailableSlot availableSlot = new AvailableSlot(inventory, slotIndex, -1000000, -1000000, isAvailable, player);
 
             addSlot(availableSlot);
+        }
+
+        for (int rowSearch = 0; rowSearch < 3; ++rowSearch) {
+            for (int slotSearch = 0; slotSearch < 5; ++slotSearch) {
+                int xPos = 184 + slotSearch * 18;
+                int yPos = rowSearch * 18 + 21;
+                int slotIndex = InventoryData.getExtraInvSlotStart() + extraSlotSize + slotSearch + rowSearch * 5;
+
+                addSlot(new SearchSlot(inventory, slotIndex, xPos, yPos));
+            }
         }
     }
 
@@ -65,14 +91,9 @@ public class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     }
 
     public void moveSlots(int amount) {
-        SendQuestPacket.TO_SERVER(new MoveSlot(amount));
+        SendPacket.TO_SERVER(new MoveSlot(amount));
     }
 
-
-    @Override
-    public void clicked(int p_150400_, int p_150401_, ClickType p_150402_, Player p_150403_) {
-        super.clicked(p_150400_, p_150401_, p_150402_, p_150403_);
-    }
 
     @Override
     public void fillCraftSlotsStackedContents(@NotNull StackedContents stackedContents) {

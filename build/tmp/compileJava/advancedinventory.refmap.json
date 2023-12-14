@@ -4,6 +4,7 @@
       "getMaxStackSize*": "Lnet/minecraft/world/inventory/Slot;m_6641_()I"
     },
     "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen": {
+      "init()V": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7856_()V",
       "renderBg": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7286_(Lnet/minecraft/client/gui/GuiGraphics;FII)V"
     },
     "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer": {
@@ -20,6 +21,7 @@
         "getMaxStackSize*": "Lnet/minecraft/world/inventory/Slot;m_6641_()I"
       },
       "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen": {
+        "init()V": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7856_()V",
         "renderBg": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7286_(Lnet/minecraft/client/gui/GuiGraphics;FII)V"
       },
       "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer": {

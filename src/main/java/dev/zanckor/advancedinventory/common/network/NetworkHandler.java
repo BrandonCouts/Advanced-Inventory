@@ -1,6 +1,7 @@
 package dev.zanckor.advancedinventory.common.network;
 
 import dev.zanckor.advancedinventory.common.network.packet.MoveSlot;
+import dev.zanckor.advancedinventory.common.network.packet.SearchItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkRegistry;
@@ -20,10 +21,14 @@ public class NetworkHandler {
     );
 
     public static void register() {
-        int index = 0;
+        int index = -1;
 
-        CHANNEL.messageBuilder(MoveSlot.class, index++, NetworkDirection.PLAY_TO_SERVER)
+        CHANNEL.messageBuilder(MoveSlot.class, ++index, NetworkDirection.PLAY_TO_SERVER)
                 .encoder(MoveSlot::encodeBuffer).decoder(MoveSlot::new)
                 .consumerNetworkThread(MoveSlot::handler).add();
+
+        CHANNEL.messageBuilder(SearchItem.class, ++index, NetworkDirection.PLAY_TO_SERVER)
+                .encoder(SearchItem::encodeBuffer).decoder(SearchItem::new)
+                .consumerNetworkThread(SearchItem::handler).add();
     }
 }
