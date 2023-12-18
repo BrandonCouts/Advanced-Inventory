@@ -33,6 +33,9 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
     private static final int IMAGE_WIDTH = 275;
     private static final int IMAGE_HEIGHT = 184;
     private EditBox editBox;
+    private boolean isSearching = false;
+    private static final int DELETE_KEY = 259;
+
 
     public MixinInventoryScreen(InventoryMenu abstractContainerMenu, Inventory inventory, Component component) {
         super(abstractContainerMenu, inventory, component);
@@ -50,10 +53,24 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
     }
 
     @Override
-    public boolean keyReleased(int i, int i1, int i2) {
-        SendPacket.TO_SERVER(new SearchItem(editBox.getValue()));
+    public boolean mouseClicked(double x, double y, int clickType) {
+        isSearching = editBox.isMouseOver(x, y);
 
-        return super.keyReleased(i, i1, i2);
+        return super.mouseClicked(x, y, clickType);
+    }
+
+    @Override
+    public boolean keyPressed(int keyInt, int p_97766_, int p_97767_) {
+        if(isSearching){
+            if(keyInt == DELETE_KEY && editBox.getValue().length() > 0){
+                editBox.setValue(editBox.getValue().substring(0, editBox.getValue().length() - 1));
+            }
+
+            SendPacket.TO_SERVER(new SearchItem(editBox.getValue()));
+            return true;
+        }
+
+        return super.keyPressed(keyInt, p_97766_, p_97767_);
     }
 
     @Inject(method = "renderBg", at = @At("TAIL"))
