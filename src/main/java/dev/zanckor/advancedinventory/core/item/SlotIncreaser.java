@@ -23,10 +23,14 @@ public class SlotIncreaser extends Item {
             for (int slotIndex = InventoryData.getExtraInvSlotEnd(player); slotIndex < InventoryData.getExtraInvSlotEnd(player) + 9; slotIndex++) {
                 AvailableSlot slot = (AvailableSlot) player.containerMenu.slots.get(slotIndex);
                 slot.setAvailable(false);
+                stack.setCount(stack.getCount() - 1);
             }
 
             InventoryData.increaseExtraInvSlotStart(9, player);
-            MCUtil.sendPlayerMessage(player, "You now have " + InventoryData.getExtraInvSlotEnd(player) + " extra inventory slots.");
+
+            if(!player.level().isClientSide){
+                MCUtil.sendPlayerMessage(player, "You now have " + InventoryData.getExtraInvSlotEnd(player) + " extra inventory slots.");
+            }
         }
 
 
