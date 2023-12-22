@@ -1,11 +1,16 @@
 package dev.zanckor.advancedinventory.core.event;
 
+import com.mojang.serialization.JsonOps;
+import dev.zanckor.advancedinventory.core.data.AddLootModifier;
 import dev.zanckor.advancedinventory.core.data.capability.PlayerInventoryDataProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.GameRules;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

@@ -1,5 +1,6 @@
 package dev.zanckor.advancedinventory.core.registry;
 
+import dev.zanckor.advancedinventory.core.item.CaptureMobItem;
 import dev.zanckor.advancedinventory.core.item.SlotIncreaser;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -15,6 +16,9 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> SLOT_INCREASER = ITEMS.register("slot_increaser",
             () -> new SlotIncreaser(new Item.Properties().stacksTo(64)));
+
+    public static final RegistryObject<Item> CAPTURE_MOB = ITEMS.register("capture_mob",
+            () -> new CaptureMobItem(new Item.Properties().stacksTo(64)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

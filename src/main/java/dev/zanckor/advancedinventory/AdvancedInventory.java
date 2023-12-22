@@ -3,6 +3,7 @@ package dev.zanckor.advancedinventory;
 import com.mojang.logging.LogUtils;
 import dev.zanckor.advancedinventory.common.network.NetworkHandler;
 import dev.zanckor.advancedinventory.core.registry.ItemRegistry;
+import dev.zanckor.advancedinventory.core.registry.LootModifierRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -26,5 +27,8 @@ public class AdvancedInventory {
 
         LOGGER.info("Registering items for AdvancedInventory");
         ItemRegistry.register(iEventBus);
+
+        LOGGER.info("Registering loot modifiers for AdvancedInventory");
+        LootModifierRegistry.register(iEventBus);
     }
 }
