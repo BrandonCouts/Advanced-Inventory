@@ -2,6 +2,7 @@ package dev.zanckor.advancedinventory.mixin.inventory;
 
 import dev.zanckor.advancedinventory.common.network.SendPacket;
 import dev.zanckor.advancedinventory.common.network.packet.MoveSlot;
+import dev.zanckor.advancedinventory.core.config.ServerConfig;
 import dev.zanckor.advancedinventory.core.data.InventoryData;
 import dev.zanckor.advancedinventory.core.inventory.slot.AvailableSlot;
 import dev.zanckor.advancedinventory.core.inventory.slot.SearchSlot;
@@ -45,18 +46,17 @@ public abstract class MixinInventoryMenu extends RecipeBookMenu<CraftingContaine
     @Inject(method = "<init>", at = @At("TAIL"))
     public void constructor(Inventory inventory, boolean bl, Player player, CallbackInfo ci) {
         int startIndexHotbar = InventoryData.getExtraInvSlotStart() - 9;
-        int extraSlotSize = 900; // TODO: 900 with config
+        int extraSlotSize = ServerConfig.DEFAULT_ROW_SIZE.get() * 9;
 
         for (int extraHotbarSlot = 0; extraHotbarSlot < 9; ++extraHotbarSlot) {
             int xPos = 8 + extraHotbarSlot * 18;
             int yPos = 160;
-            int slotIndex = startIndexHotbar + extraHotbarSlot;
 
             addSlot(new AvailableSlot(inventory, startIndexHotbar + extraHotbarSlot, xPos, yPos, true, player));
         }
 
         for (int slot = 0; slot < extraSlotSize; ++slot) {
-            boolean isAvailable = slot < 9; // TODO: Change with config. This is the number of available slots
+            boolean isAvailable = slot < ServerConfig.DEFAULT_ROW_SIZE.get();
             int slotIndex = InventoryData.getExtraInvSlotStart() + slot;
             AvailableSlot availableSlot = new AvailableSlot(inventory, slotIndex, -1000000, -1000000, isAvailable, player);
 

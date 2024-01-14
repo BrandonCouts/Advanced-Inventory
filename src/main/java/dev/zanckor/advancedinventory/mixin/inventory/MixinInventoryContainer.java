@@ -2,6 +2,7 @@ package dev.zanckor.advancedinventory.mixin.inventory;
 
 
 import com.google.common.collect.ImmutableList;
+import dev.zanckor.advancedinventory.core.config.ServerConfig;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -39,7 +40,7 @@ public class MixinInventoryContainer {
 
     @Inject(method = "<init>", at = @At("TAIL"))
     public void init(Player player, CallbackInfo ci) {
-        extraSlot = NonNullList.withSize(929, ItemStack.EMPTY); // TODO: Change 900 with config
+        extraSlot = NonNullList.withSize((ServerConfig.LIMIT_ROWS.get() * 9) + 29, ItemStack.EMPTY);
         compartments = ImmutableList.of(items, armor, offhand, extraSlot);
     }
 

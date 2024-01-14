@@ -3,6 +3,9 @@
     "dev/zanckor/advancedinventory/mixin/inventory/ContainerMixin": {
       "getMaxStackSize*": "Lnet/minecraft/world/inventory/Slot;m_6641_()I"
     },
+    "dev/zanckor/advancedinventory/mixin/inventory/ItemEntityMixin": {
+      "merge(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V": "Lnet/minecraft/world/entity/item/ItemEntity;m_32022_(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V"
+    },
     "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen": {
       "init()V": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7856_()V",
       "renderBg": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7286_(Lnet/minecraft/client/gui/GuiGraphics;FII)V"
@@ -10,6 +13,9 @@
     "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer": {
       "load": "Lnet/minecraft/world/entity/player/Inventory;m_36035_(Lnet/minecraft/nbt/ListTag;)V",
       "save": "Lnet/minecraft/world/entity/player/Inventory;m_36026_(Lnet/minecraft/nbt/ListTag;)Lnet/minecraft/nbt/ListTag;"
+    },
+    "dev/zanckor/advancedinventory/mixin/inventory/ItemMixin": {
+      "getMaxStackSize": "Lnet/minecraft/world/item/Item;m_41459_()I"
     },
     "dev/zanckor/advancedinventory/mixin/inventory/TextItemRendererMixin": {
       "renderItemDecorations(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V": "Lnet/minecraft/client/gui/GuiGraphics;m_280302_(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V"
@@ -20,6 +26,9 @@
       "dev/zanckor/advancedinventory/mixin/inventory/ContainerMixin": {
         "getMaxStackSize*": "Lnet/minecraft/world/inventory/Slot;m_6641_()I"
       },
+      "dev/zanckor/advancedinventory/mixin/inventory/ItemEntityMixin": {
+        "merge(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V": "Lnet/minecraft/world/entity/item/ItemEntity;m_32022_(Lnet/minecraft/world/entity/item/ItemEntity;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V"
+      },
       "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen": {
         "init()V": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7856_()V",
         "renderBg": "Lnet/minecraft/client/gui/screens/inventory/InventoryScreen;m_7286_(Lnet/minecraft/client/gui/GuiGraphics;FII)V"
@@ -27,6 +36,9 @@
       "dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer": {
         "load": "Lnet/minecraft/world/entity/player/Inventory;m_36035_(Lnet/minecraft/nbt/ListTag;)V",
         "save": "Lnet/minecraft/world/entity/player/Inventory;m_36026_(Lnet/minecraft/nbt/ListTag;)Lnet/minecraft/nbt/ListTag;"
+      },
+      "dev/zanckor/advancedinventory/mixin/inventory/ItemMixin": {
+        "getMaxStackSize": "Lnet/minecraft/world/item/Item;m_41459_()I"
       },
       "dev/zanckor/advancedinventory/mixin/inventory/TextItemRendererMixin": {
         "renderItemDecorations(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V": "Lnet/minecraft/client/gui/GuiGraphics;m_280302_(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V"

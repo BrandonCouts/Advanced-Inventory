@@ -8,6 +8,7 @@ dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu resultSlots f_3
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu owner f_39703_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen xMouse f_98831_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen yMouse f_98832_
+dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen recipeBookComponent f_98833_
 dev/zanckor/advancedinventory/mixin/inventory/TextItemRendererMixin pose f_279612_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu slotsChanged (Lnet/minecraft/world/Container;)V m_6199_
 dev/zanckor/advancedinventory/mixin/inventory/TextItemRendererMixin drawString (Lnet/minecraft/client/gui/Font;Ljava/lang/String;III)I m_280488_

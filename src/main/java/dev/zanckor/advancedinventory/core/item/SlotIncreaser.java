@@ -14,6 +14,8 @@ public class SlotIncreaser extends Item {
         super(properties);
     }
 
+
+
     @Override
     public InteractionResult onItemUseFirst(ItemStack stack, UseOnContext context) {
         Player player = context.getPlayer();
@@ -21,9 +23,10 @@ public class SlotIncreaser extends Item {
         if (player != null) {
             // Change the next 9 slots to be extra inventory slots
             for (int slotIndex = InventoryData.getExtraInvSlotEnd(player); slotIndex < InventoryData.getExtraInvSlotEnd(player) + 9; slotIndex++) {
-                AvailableSlot slot = (AvailableSlot) player.containerMenu.slots.get(slotIndex);
-                slot.setAvailable(false);
-                stack.setCount(stack.getCount() - 1);
+                if(player.containerMenu.slots.get(slotIndex) instanceof AvailableSlot slot) {
+                    slot.setAvailable(false);
+                    stack.setCount(stack.getCount() - 1);
+                }
             }
 
             InventoryData.increaseExtraInvSlotStart(9, player);

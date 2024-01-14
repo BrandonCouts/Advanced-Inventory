@@ -1,5 +1,6 @@
 package dev.zanckor.advancedinventory.common.network.handler;
 
+import dev.zanckor.advancedinventory.core.config.ServerConfig;
 import dev.zanckor.advancedinventory.core.data.InventoryData;
 import dev.zanckor.advancedinventory.util.MCUtil;
 import net.minecraft.server.level.ServerPlayer;
@@ -49,7 +50,9 @@ public class ServerHandler {
     }
 
     public static void searchItemText(String text, ServerPlayer player) {
-        int slotIndexStart = InventoryData.getExtraInvSlotStart() + 900; // TODO: Change this to config
+        int extraSlotSize = ServerConfig.DEFAULT_ROW_SIZE.get() * 9;
+
+        int slotIndexStart = InventoryData.getExtraInvSlotStart() + extraSlotSize;
 
         MCUtil.shortSlotsByItem(player, text, slotIndexStart, 9, InventoryData.getExtraInvSlotEnd(player), 15);
     }

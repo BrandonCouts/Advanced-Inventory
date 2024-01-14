@@ -25,6 +25,6 @@ public class AvailableSlot extends Slot {
 
     @Override
     public boolean isActive() {
-        return !owner.isCreative() && !owner.isSpectator();
+        return !owner.isCreative() && !owner.isSpectator() && isAvailable();
     }
 }

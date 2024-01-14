@@ -6,6 +6,7 @@
   "refmap": "advancedinventory.refmap.json",
   "mixins": [
     "inventory.ContainerMixin",
+    "inventory.ItemEntityMixin",
     "inventory.ItemMixin",
     "inventory.MixinInventoryContainer",
     "inventory.MixinInventoryMenu"

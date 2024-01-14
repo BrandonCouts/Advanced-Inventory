@@ -1,5 +1,6 @@
 package dev.zanckor.advancedinventory.core.item;
 
+import dev.zanckor.advancedinventory.core.registry.ItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -9,10 +10,16 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class CaptureMobItem extends Item {
-    private CompoundTag entityData = null;
 
     public CaptureMobItem(Properties properties) {
         super(properties);
@@ -20,45 +27,55 @@ public class CaptureMobItem extends Item {
 
     @Override
     public InteractionResult onItemUseFirst(ItemStack stack, UseOnContext context) {
-        System.out.println("A");
         BlockPos pos = context.getClickedPos();
-
-        EntityType.loadEntityRecursive(entityData, context.getLevel(), (entity) -> {
+        if(!stack.getOrCreateTagElement("entity").contains("EntityTag")) {
+            return InteractionResult.FAIL;
+        } else {
+            EntityType<?> entityType = EntityType.byString(stack.getOrCreateTagElement("entity").getString("Type")).orElseGet(() -> EntityType.PIG);
+            Entity entity = entityType.create(context.getLevel());
+            entity.load(stack.getOrCreateTagElement("entity").getCompound("EntityTag"));
+            entity.moveTo(pos.getX(), pos.getY() + 1, pos.getZ());
             context.getLevel().addFreshEntity(entity);
-            entity.moveTo(pos.getX(), pos.getY(), pos.getZ());
 
-            return entity;
-        });
-
-        entityData = null;
+            stack.getOrCreateTagElement("entity").remove("EntityTag");
+        }
 
         return super.onItemUseFirst(stack, context);
     }
 
     @Override
     public boolean onLeftClickEntity(ItemStack stack, Player player, Entity entity) {
-        //createNewStack(entity, player);
-        addEntity(entity);
+        if(stack.getOrCreateTagElement("entity").contains("EntityTag")) {
+            return false;
+        }
 
+        entity.remove(Entity.RemovalReason.DISCARDED);
+        player.getMainHandItem().setCount(player.getMainHandItem().getCount() - 1);
 
+        //Create a CaptureMobItem with the entity's type
+        ItemStack captureMobItem = ItemRegistry.CAPTURE_MOB.get().getDefaultInstance();
+
+        captureMobItem.getOrCreateTagElement("entity").put("EntityTag", entity.saveWithoutId(new CompoundTag()));
+        captureMobItem.getOrCreateTagElement("entity").putString("Name", entity.getName().getString());
+        captureMobItem.getOrCreateTagElement("entity").putString("Type", EntityType.getKey(entity.getType()).toString());
+
+        player.addItem(captureMobItem);
         return super.onLeftClickEntity(stack, player, entity);
     }
 
-    public void createNewStack(Entity entity, Player player) {
-        ItemStack stack = new ItemStack(this.getDefaultInstance().getItem());
-        stack.setHoverName(Component.literal("Captured Entity: " + entity.getDisplayName().getString()));
-        ((CaptureMobItem) stack.getItem()).addEntity(entity);
+    @Override
+    public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> components, TooltipFlag tooltipFlag) {
+        if(itemStack.getOrCreateTagElement("entity").contains("EntityTag")) {
+            components.add(Component.literal("Right click to spawn " + itemStack.getOrCreateTagElement("entity").getString("Name")));
+        } else {
+            components.add(Component.literal("Left click to capture entity"));
+        }
 
-        player.addItem(stack);
-    }
-
-    public void addEntity(Entity entity) {
-        entity.save(entityData = new CompoundTag());
-        entity.remove(Entity.RemovalReason.DISCARDED);
+        super.appendHoverText(itemStack, level, components, tooltipFlag);
     }
 
     @Override
     public int getMaxStackSize(ItemStack stack) {
-        return entityData == null ? 64 : 1;
+        return stack.getOrCreateTagElement("entity").contains("EntityTag") ? 1 : super.getMaxStackSize(stack);
     }
 }

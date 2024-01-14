@@ -1,261 +1,132 @@
-[21dic2023 13:11:41.259] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\zanck\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, advancedinventory.mixins.json]
-[21dic2023 13:11:41.264] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8.1 by JetBrains s.r.o.; OS Windows 11 arch amd64 version 10.0
-[21dic2023 13:11:41.400] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[21dic2023 13:11:41.475] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[21dic2023 13:11:41.568] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[21dic2023 13:11:41.702] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/zanck/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[21dic2023 13:11:41.730] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Radeon RX 5500 XT GL version 4.6.0 Core Profile Context 23.9.3.230915, ATI Technologies Inc.
-[21dic2023 13:11:42.096] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[21dic2023 13:11:42.101] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[21dic2023 13:11:42.107] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
-[21dic2023 13:11:42.113] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
-[21dic2023 13:11:42.209] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[21dic2023 13:11:43.560] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\zanck\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
-[21dic2023 13:11:43.644] [main/WARN] [mixin/]: Reference map 'advancedinventory.refmap.json' for advancedinventory.mixins.json could not be read. If this is a development environment you can ignore this message
-[21dic2023 13:11:47.451] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 144 milliseconds
-[21dic2023 13:11:49.164] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/intellij/clients/Advanced%20Inventory/build/fg_cache/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[21dic2023 13:11:49.164] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/intellij/clients/Advanced%20Inventory/build/fg_cache/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[21dic2023 13:11:49.184] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[21dic2023 13:11:49.191] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[21dic2023 13:11:49.307] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[21dic2023 13:11:49.539] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Loading AdvancedInventory
-[21dic2023 13:11:49.539] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Registering network handler for AdvancedInventory
-[21dic2023 13:11:49.558] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
-[21dic2023 13:11:49.558] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
-[21dic2023 13:11:49.595] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Registering items for AdvancedInventory
-[21dic2023 13:11:49.604] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Registering loot modifiers for AdvancedInventory
-[21dic2023 13:11:50.698] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [advancedinventory]
-[21dic2023 13:11:50.868] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
-[21dic2023 13:11:51.002] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[21dic2023 13:11:51.011] [Worker-Main-11/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
-[21dic2023 13:11:51.691] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.2.0 Target: null
-[21dic2023 13:11:51.956] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'advancedinventory:slot_increaser#inventory' referenced from: advancedinventory:slot_increaser#inventory: java.io.FileNotFoundException: advancedinventory:models/item/slot_increaser.json
-[21dic2023 13:11:51.956] [Worker-Main-9/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'advancedinventory:capture_mob#inventory' referenced from: advancedinventory:capture_mob#inventory: java.io.FileNotFoundException: advancedinventory:models/item/capture_mob.json
-[21dic2023 13:11:53.563] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[21dic2023 13:11:53.563] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[21dic2023 13:11:53.613] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on 1 - ASUS VP228 (AMD High Definition Audio Device)
-[21dic2023 13:11:53.614] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[21dic2023 13:11:53.745] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[21dic2023 13:11:53.755] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[21dic2023 13:11:53.756] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[21dic2023 13:11:53.756] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[21dic2023 13:11:53.760] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[21dic2023 13:11:53.775] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[21dic2023 13:11:53.775] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[21dic2023 13:11:53.775] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[21dic2023 13:11:53.775] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[21dic2023 13:11:54.098] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[21dic2023 13:11:54.185] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[21dic2023 13:11:54.187] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[21dic2023 13:11:54.187] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[21dic2023 13:11:54.436] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[21dic2023 13:11:57.819] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
-[21dic2023 13:11:59.696] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
-[21dic2023 13:11:59.794] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1271 advancements
-[21dic2023 13:12:00.399] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
-[21dic2023 13:12:00.399] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[21dic2023 13:12:01.660] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[21dic2023 13:12:03.932] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0 %
-[21dic2023 13:12:03.933] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0 %
-[21dic2023 13:12:03.933] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0 %
-[21dic2023 13:12:03.934] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0 %
-[21dic2023 13:12:03.934] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 0 %
-[21dic2023 13:12:04.178] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 2 %
-[21dic2023 13:12:04.685] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparando zona de aparición: 86 %
-[21dic2023 13:12:04.711] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[21dic2023 13:12:04.721] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3045 ms
-[21dic2023 13:12:04.859] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[21dic2023 13:12:04.861] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[21dic2023 13:12:04.955] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[21dic2023 13:12:05.347] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[21dic2023 13:12:05.397] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:21af79e1] logged in with entity id 134 at (279.1914289721582, 64.0, 272.0729169615763)
-[21dic2023 13:12:05.453] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev se ha unido a la partida
-[21dic2023 13:12:05.918] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 156 advancements
-[21dic2023 13:12:09.014] [Render thread/WARN] [net.minecraft.world.entity.EntityType/]: Exception loading entity: 
-java.lang.NullPointerException: Cannot invoke "net.minecraft.nbt.CompoundTag.getString(String)" because "p_20638_" is null
-	at net.minecraft.world.entity.EntityType.by(EntityType.java:558) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.entity.EntityType.create(EntityType.java:529) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.entity.EntityType.loadStaticEntity(EntityType.java:607) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.entity.EntityType.loadEntityRecursive(EntityType.java:563) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at dev.zanckor.advancedinventory.core.item.CaptureMobItem.onItemUseFirst(CaptureMobItem.java:26) ~[main/:?]
-	at net.minecraft.world.item.ItemStack.lambda$onItemUseFirst$4(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.item.ItemStack.onItemUseFirst(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.performUseItemOn(MultiPlayerGameMode.java:310) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.lambda$useItemOn$4(MultiPlayerGameMode.java:291) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.startPrediction(MultiPlayerGameMode.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.useItemOn(MultiPlayerGameMode.java:290) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.startUseItem(Minecraft.java:1698) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.handleKeybinds(Minecraft.java:1976) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.tick(Minecraft.java:1795) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1112) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:718) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:218) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[21dic2023 13:12:09.055] [Server thread/WARN] [net.minecraft.world.entity.EntityType/]: Exception loading entity: 
-java.lang.NullPointerException: Cannot invoke "net.minecraft.nbt.CompoundTag.getString(String)" because "p_20638_" is null
-	at net.minecraft.world.entity.EntityType.by(EntityType.java:558) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.create(EntityType.java:529) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadStaticEntity(EntityType.java:607) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadEntityRecursive(EntityType.java:563) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at dev.zanckor.advancedinventory.core.item.CaptureMobItem.onItemUseFirst(CaptureMobItem.java:26) ~[%23196!/:?]
-	at net.minecraft.world.item.ItemStack.lambda$onItemUseFirst$4(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUseFirst(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.level.ServerPlayerGameMode.useItemOn(ServerPlayerGameMode.java:336) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.network.ServerGamePacketListenerImpl.handleUseItemOn(ServerGamePacketListenerImpl.java:1057) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:32) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:8) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.TickTask.run(TickTask.java:17) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:143) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:770) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:161) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:116) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:753) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:747) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:104) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:732) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:665) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at java.lang.Thread.run(Thread.java:833) ~[?:?]
-[21dic2023 13:12:09.496] [Render thread/WARN] [net.minecraft.world.entity.EntityType/]: Exception loading entity: 
-java.lang.NullPointerException: Cannot invoke "net.minecraft.nbt.CompoundTag.getString(String)" because "p_20638_" is null
-	at net.minecraft.world.entity.EntityType.by(EntityType.java:558) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.entity.EntityType.create(EntityType.java:529) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.entity.EntityType.loadStaticEntity(EntityType.java:607) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.entity.EntityType.loadEntityRecursive(EntityType.java:563) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at dev.zanckor.advancedinventory.core.item.CaptureMobItem.onItemUseFirst(CaptureMobItem.java:26) ~[main/:?]
-	at net.minecraft.world.item.ItemStack.lambda$onItemUseFirst$4(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.world.item.ItemStack.onItemUseFirst(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.performUseItemOn(MultiPlayerGameMode.java:310) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.lambda$useItemOn$4(MultiPlayerGameMode.java:291) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.startPrediction(MultiPlayerGameMode.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.multiplayer.MultiPlayerGameMode.useItemOn(MultiPlayerGameMode.java:290) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.startUseItem(Minecraft.java:1698) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.handleKeybinds(Minecraft.java:1976) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.tick(Minecraft.java:1795) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1112) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.Minecraft.run(Minecraft.java:718) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at net.minecraft.client.main.Main.main(Main.java:218) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.2.0.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
-	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
-[21dic2023 13:12:09.499] [Server thread/WARN] [net.minecraft.world.entity.EntityType/]: Exception loading entity: 
-java.lang.NullPointerException: Cannot invoke "net.minecraft.nbt.CompoundTag.getString(String)" because "p_20638_" is null
-	at net.minecraft.world.entity.EntityType.by(EntityType.java:558) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.create(EntityType.java:529) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadStaticEntity(EntityType.java:607) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadEntityRecursive(EntityType.java:563) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at dev.zanckor.advancedinventory.core.item.CaptureMobItem.onItemUseFirst(CaptureMobItem.java:26) ~[%23196!/:?]
-	at net.minecraft.world.item.ItemStack.lambda$onItemUseFirst$4(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUseFirst(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.level.ServerPlayerGameMode.useItemOn(ServerPlayerGameMode.java:336) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.network.ServerGamePacketListenerImpl.handleUseItemOn(ServerGamePacketListenerImpl.java:1057) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:32) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:8) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.TickTask.run(TickTask.java:17) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:143) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:770) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:161) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:116) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:753) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:747) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:126) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:733) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:665) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at java.lang.Thread.run(Thread.java:833) ~[?:?]
-[21dic2023 13:12:14.272] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Se ha generado la entidad «Cerdo»]
-[21dic2023 13:12:14.277] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Se ha generado la entidad «Cerdo»
-[21dic2023 13:12:17.135] [Server thread/WARN] [net.minecraft.world.entity.EntityType/]: Exception loading entity: 
-java.lang.NullPointerException: Cannot invoke "net.minecraft.nbt.CompoundTag.getString(String)" because "p_20638_" is null
-	at net.minecraft.world.entity.EntityType.by(EntityType.java:558) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.create(EntityType.java:529) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadStaticEntity(EntityType.java:607) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadEntityRecursive(EntityType.java:563) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at dev.zanckor.advancedinventory.core.item.CaptureMobItem.onItemUseFirst(CaptureMobItem.java:26) ~[%23196!/:?]
-	at net.minecraft.world.item.ItemStack.lambda$onItemUseFirst$4(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUseFirst(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.level.ServerPlayerGameMode.useItemOn(ServerPlayerGameMode.java:336) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.network.ServerGamePacketListenerImpl.handleUseItemOn(ServerGamePacketListenerImpl.java:1057) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:32) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:8) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.TickTask.run(TickTask.java:17) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:143) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:770) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:161) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:116) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:753) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:747) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:126) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:733) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:665) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at java.lang.Thread.run(Thread.java:833) ~[?:?]
-[21dic2023 13:12:21.492] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Se ha generado la entidad «Cerdo»]
-[21dic2023 13:12:21.493] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Se ha generado la entidad «Cerdo»
-[21dic2023 13:12:24.831] [Server thread/WARN] [net.minecraft.world.entity.EntityType/]: Exception loading entity: 
-java.lang.NullPointerException: Cannot invoke "net.minecraft.nbt.CompoundTag.getString(String)" because "p_20638_" is null
-	at net.minecraft.world.entity.EntityType.by(EntityType.java:558) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.create(EntityType.java:529) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadStaticEntity(EntityType.java:607) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.entity.EntityType.loadEntityRecursive(EntityType.java:563) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at dev.zanckor.advancedinventory.core.item.CaptureMobItem.onItemUseFirst(CaptureMobItem.java:26) ~[%23196!/:?]
-	at net.minecraft.world.item.ItemStack.lambda$onItemUseFirst$4(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUse(ItemStack.java:261) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.world.item.ItemStack.onItemUseFirst(ItemStack.java:250) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.level.ServerPlayerGameMode.useItemOn(ServerPlayerGameMode.java:336) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.network.ServerGamePacketListenerImpl.handleUseItemOn(ServerGamePacketListenerImpl.java:1057) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:32) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.game.ServerboundUseItemOnPacket.handle(ServerboundUseItemOnPacket.java:8) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.TickTask.run(TickTask.java:17) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:143) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:22) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:770) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:161) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:116) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:753) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:747) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:126) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:733) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:665) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:251) ~[forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/:?]
-	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[14ene2024 23:49:49.773] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\zanck\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, advancedinventory.mixins.json]
+[14ene2024 23:49:49.780] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.8.1 by JetBrains s.r.o.; OS Windows 11 arch amd64 version 10.0
+[14ene2024 23:49:49.939] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[14ene2024 23:49:50.030] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[14ene2024 23:49:50.137] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[14ene2024 23:49:50.281] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/zanck/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[14ene2024 23:49:50.307] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Radeon RX 5500 XT GL version 4.6.0 Core Profile Context 23.9.3.230915, ATI Technologies Inc.
+[14ene2024 23:49:50.757] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.0\7f9181f85acc66547685a72020713fc8cbde98\javafmllanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[14ene2024 23:49:50.764] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.0\7872f5205685fdd26fae39b1be79b0e60ca5b7bd\lowcodelanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[14ene2024 23:49:50.786] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.0\d501d161cabed08b3c139a2c6217b02a39f3c3e9\mclanguage-1.20.1-47.2.0.jar is missing mods.toml file
+[14ene2024 23:49:50.792] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\zanck\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.0\ffd3c6debac0a388c9e33ac43c9f5eafb91cb466\fmlcore-1.20.1-47.2.0.jar is missing mods.toml file
+[14ene2024 23:49:50.915] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[14ene2024 23:49:52.777] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\zanck\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[14ene2024 23:49:52.887] [main/WARN] [mixin/]: Reference map 'advancedinventory.refmap.json' for advancedinventory.mixins.json could not be read. If this is a development environment you can ignore this message
+[14ene2024 23:49:58.184] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 192 milliseconds
+[14ene2024 23:50:00.586] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/intellij/clients/Advanced%20Inventory/build/fg_cache/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[14ene2024 23:50:00.587] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/F:/intellij/clients/Advanced%20Inventory/build/fg_cache/net/minecraftforge/forge/1.20.1-47.2.0_mapped_official_1.20.1/forge-1.20.1-47.2.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[14ene2024 23:50:00.618] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[14ene2024 23:50:00.627] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[14ene2024 23:50:00.801] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[14ene2024 23:50:01.185] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Loading AdvancedInventory
+[14ene2024 23:50:01.185] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Registering network handler for AdvancedInventory
+[14ene2024 23:50:01.214] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.0, for MC 1.20.1 with MCP 20230612.114412
+[14ene2024 23:50:01.214] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.0 Initialized
+[14ene2024 23:50:01.255] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Registering items for AdvancedInventory
+[14ene2024 23:50:01.265] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Registering loot modifiers for AdvancedInventory
+[14ene2024 23:50:01.270] [modloading-worker-0/INFO] [dev.zanckor.advancedinventory.AdvancedInventory/]: Registering config for AdvancedInventory
+[14ene2024 23:50:02.705] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [advancedinventory]
+[14ene2024 23:50:02.914] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[14ene2024 23:50:03.084] [Worker-Main-1/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[14ene2024 23:50:03.103] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[14ene2024 23:50:04.057] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.2.0 Target: null
+[14ene2024 23:50:07.631] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[14ene2024 23:50:07.631] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[14ene2024 23:50:07.703] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on 1 - ASUS VP228 (AMD High Definition Audio Device)
+[14ene2024 23:50:07.704] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[14ene2024 23:50:07.887] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[14ene2024 23:50:07.904] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[14ene2024 23:50:07.905] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[14ene2024 23:50:07.905] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[14ene2024 23:50:07.907] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[14ene2024 23:50:07.927] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[14ene2024 23:50:07.929] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[14ene2024 23:50:07.929] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[14ene2024 23:50:07.930] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[14ene2024 23:50:08.392] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[14ene2024 23:50:08.532] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[14ene2024 23:50:08.535] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[14ene2024 23:50:08.537] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[14ene2024 23:50:08.803] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[14ene2024 23:50:13.166] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[14ene2024 23:50:15.163] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 7 recipes
+[14ene2024 23:50:15.281] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1271 advancements
+[14ene2024 23:50:15.850] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[14ene2024 23:50:15.851] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[14ene2024 23:50:17.325] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[14ene2024 23:50:20.790] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:20.790] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:20.791] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:20.791] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:20.791] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:20.791] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:20.791] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:20.854] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
+[14ene2024 23:50:21.353] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 22%
+[14ene2024 23:50:21.865] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 90%
+[14ene2024 23:50:21.907] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 4560 ms
+[14ene2024 23:50:21.907] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[14ene2024 23:50:22.107] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[14ene2024 23:50:22.110] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[14ene2024 23:50:22.222] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[14ene2024 23:50:22.770] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[14ene2024 23:50:22.847] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:7e1b1646] logged in with entity id 67 at (65.5717956429569, 103.0, 151.26041790655233)
+[14ene2024 23:50:22.952] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[14ene2024 23:50:23.852] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 64 advancements
+[14ene2024 23:50:24.523] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[14ene2024 23:50:24.602] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[14ene2024 23:50:26.372] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[14ene2024 23:50:26.374] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[14ene2024 23:50:26.439] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2031ms or 40 ticks behind
+[14ene2024 23:50:41.008] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Creative Mode]
+[14ene2024 23:50:41.018] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Creative Mode
+[14ene2024 23:50:41.908] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[14ene2024 23:50:41.925] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[14ene2024 23:50:41.940] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[14ene2024 23:50:41.941] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[14ene2024 23:50:54.992] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> look
+[14ene2024 23:50:55.014] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> look
+[14ene2024 23:51:08.885] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> when u click with 3rd button to copy, it stacks at default size
+[14ene2024 23:51:08.886] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> when u click with 3rd button to copy, it stacks at default size
+[14ene2024 23:51:15.836] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> but u can collapse it
+[14ene2024 23:51:15.838] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> but u can collapse it
+[14ene2024 23:51:35.646] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> if you throw them, it'll catch it as default vanilla size aswell
+[14ene2024 23:51:35.649] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> if you throw them, it'll catch it as default vanilla size aswell
+[14ene2024 23:51:47.734] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> this is due some bugs that may occur
+[14ene2024 23:51:47.736] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> this is due some bugs that may occur
+[14ene2024 23:51:51.801] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
+[14ene2024 23:51:51.804] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Survival Mode
+[14ene2024 23:51:53.684] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Creative Mode]
+[14ene2024 23:51:53.687] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Creative Mode
+[14ene2024 23:51:58.564] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Survival Mode]
+[14ene2024 23:51:58.565] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Survival Mode
+[14ene2024 23:52:40.101] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> btw tridents are thrown all in 1
+[14ene2024 23:52:40.102] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> btw tridents are thrown all in 1
+[14ene2024 23:52:42.852] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> not like swords
+[14ene2024 23:52:42.854] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> not like swords
+[14ene2024 23:52:54.220] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> what's Dreamweaver?
+[14ene2024 23:52:54.222] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> what's Dreamweaver?
+[14ene2024 23:53:11.864] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> well lemme try something
+[14ene2024 23:53:11.873] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> well lemme try something
+[14ene2024 23:53:18.829] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> u might use better config
+[14ene2024 23:53:18.834] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> u might use better config
+[14ene2024 23:53:48.032] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> Configured*
+[14ene2024 23:53:48.034] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> Configured*
+[14ene2024 23:53:59.615] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> lets change config without restarting your minecraft
+[14ene2024 23:53:59.623] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> lets change config without restarting your minecraft
+[14ene2024 23:54:05.284] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Not Secure] <Dev> lemme try it
+[14ene2024 23:54:05.287] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [CHAT] <Dev> lemme try it
+[14ene2024 23:54:33.517] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+[14ene2024 23:54:33.565] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[14ene2024 23:54:33.565] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[14ene2024 23:54:33.575] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[14ene2024 23:54:33.626] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[14ene2024 23:54:33.627] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[14ene2024 23:54:33.627] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[14ene2024 23:54:34.175] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[14ene2024 23:54:37.363] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[14ene2024 23:54:37.369] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[14ene2024 23:54:37.387] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[14ene2024 23:54:37.389] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14ene2024 23:54:37.389] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14ene2024 23:54:37.389] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

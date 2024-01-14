@@ -1,13 +1,15 @@
 package dev.zanckor.advancedinventory.core.data;
 
+import dev.zanckor.advancedinventory.core.config.ServerConfig;
 import dev.zanckor.advancedinventory.core.data.capability.PlayerInventoryData;
 import dev.zanckor.advancedinventory.core.data.capability.PlayerInventoryDataProvider;
 import net.minecraft.world.entity.player.Player;
 
+import java.util.Optional;
+
 import static dev.zanckor.advancedinventory.AdvancedInventory.MODID;
 
 public class InventoryData {
-    public static final int MAX_STACK_SIZE = 1000; // TODO: Change with config
     private static final int EXTRA_INVENTORY_SLOT = 55;
 
     public static int getExtraInvSlotStart() {
