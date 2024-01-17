@@ -25,14 +25,13 @@ public class ScrollableInventoryButton extends AbstractButton {
 
     @Override @SuppressWarnings("all")
     public boolean mouseScrolled(double xPos, double yPos, double scrollType) {
-        final int UP_SCROLL = 1;
-        final int DOWN_SCROLL = -1;
+        final int UP_SCROLL = 10;
+        final int DOWN_SCROLL = -10;
 
         if(MENU != null){
-            switch ((int) scrollType) {
-                case UP_SCROLL -> MENU.clickMenuButton(null, 1);
-                case DOWN_SCROLL -> MENU.clickMenuButton(null, -1);
-            }
+            int scrollAmount = scrollType > 0 ? UP_SCROLL : DOWN_SCROLL;
+
+            MENU.clickMenuButton(null, scrollAmount);
         }
 
         return super.mouseScrolled(xPos, yPos, scrollType);

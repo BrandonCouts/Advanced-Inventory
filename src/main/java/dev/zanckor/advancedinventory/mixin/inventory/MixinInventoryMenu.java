@@ -25,6 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(InventoryMenu.class)
 public abstract class MixinInventoryMenu extends RecipeBookMenu<CraftingContainer> {
+
     @Shadow
     @Final
     private CraftingContainer craftSlots;
@@ -76,8 +77,8 @@ public abstract class MixinInventoryMenu extends RecipeBookMenu<CraftingContaine
 
     @Override
     public boolean clickMenuButton(@NotNull Player player, int clickType) {
-        final int UP_SCROLL = 1;
-        final int DOWN_SCROLL = -1;
+        final int UP_SCROLL = 10;
+        final int DOWN_SCROLL = -10;
         int slotsTranslated = 0;
 
         switch (clickType) {

@@ -26,8 +26,8 @@ public class ServerConfig {
                 .defineInRange(LIMIT_ROWS_KEY, 900, 4, Integer.MAX_VALUE);
 
         LIMIT_STACK_SIZE = builder
-                .comment("Limit the stack size of items in the extra inventory slots.")
-                .defineInRange(LIMIT_STACK_SIZE_KEY, DEFAULT_MINECRAFT_SIZE, -1, Integer.MAX_VALUE);
+                .comment("Limit the stack size of items in the extra inventory slots. (-1 to vanilla default size)")
+                .defineInRange(LIMIT_STACK_SIZE_KEY, 50000, -1, Integer.MAX_VALUE);
 
         DEFAULT_ROW_SIZE = builder
                 .comment("The default amount of slots in a row.")

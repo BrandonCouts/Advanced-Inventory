@@ -1,24 +1,21 @@
 package dev.zanckor.advancedinventory.mixin.inventory;
 
 import dev.zanckor.advancedinventory.core.config.ServerConfig;
-import net.minecraft.world.item.Item;
-import org.spongepowered.asm.mixin.Final;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.Tag;
+import net.minecraft.world.item.ItemStack;
+import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Mutable;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(Item.class)
-public class ItemMixin {
-    @Mutable
-    @Shadow
-    @Final
-    private int maxStackSize;
 
-    @Inject(method = "getMaxStackSize", at = @At("HEAD"), cancellable = true)
+@Mixin(ItemStack.class)
+public class ItemStackMixin {
+
+    @Inject(method = "getMaxStackSize", at = @At("RETURN"), cancellable = true)
     public void getMaxStackSize(CallbackInfoReturnable<Integer> cir) {
         int limitStackSize = ServerConfig.spec.isLoaded() ? ServerConfig.LIMIT_STACK_SIZE.get() : ServerConfig.DEFAULT_MINECRAFT_SIZE;
 

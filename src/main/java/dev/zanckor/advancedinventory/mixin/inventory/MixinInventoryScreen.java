@@ -1,12 +1,12 @@
 package dev.zanckor.advancedinventory.mixin.inventory;
 
 
+import dev.zanckor.advancedinventory.client.screen.widget.ScrollableArrowInventoryButton;
 import dev.zanckor.advancedinventory.client.screen.widget.ScrollableInventoryButton;
 import dev.zanckor.advancedinventory.common.network.SendPacket;
 import dev.zanckor.advancedinventory.common.network.packet.SearchItem;
 import dev.zanckor.advancedinventory.core.config.ServerConfig;
 import dev.zanckor.advancedinventory.core.data.InventoryData;
-import dev.zanckor.advancedinventory.core.inventory.slot.AvailableSlot;
 import dev.zanckor.advancedinventory.core.inventory.slot.SearchSlot;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -14,7 +14,6 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
-import net.minecraft.client.gui.screens.recipebook.RecipeBookComponent;
 import net.minecraft.client.gui.screens.recipebook.RecipeUpdateListener;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
@@ -22,7 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.inventory.Slot;
-import org.spongepowered.asm.mixin.Final;
+import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -38,7 +37,6 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
     private float xMouse;
     @Shadow
     private float yMouse;
-    @Shadow @Final private RecipeBookComponent recipeBookComponent;
     private static final int IMAGE_WIDTH = 275;
     private static final int IMAGE_HEIGHT = 184;
     private EditBox editBox;
@@ -46,7 +44,8 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
     private boolean showSearchScreen = false;
     private boolean isSearching = false;
     private static final int DELETE_KEY = 259;
-
+    private static final int ROW_UP_SCROLL = 10;
+    private static final int ROW_DOWN_SCROLL = -10;
 
     public MixinInventoryScreen(InventoryMenu abstractContainerMenu, Inventory inventory, Component component) {
         super(abstractContainerMenu, inventory, component);
@@ -55,18 +54,29 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
     @Inject(method = "init()V", at = @At("TAIL"))
     public void init(CallbackInfo ci) {
         Minecraft minecraft = Minecraft.getInstance();
+        int extraSlotSize = ServerConfig.DEFAULT_ROW_SIZE.get() * 9;
+        int startIndex = InventoryData.getExtraInvSlotStart() + extraSlotSize;
+        int endIndex = startIndex + 15;
+
         editBox = new EditBox(minecraft.font, leftPos + 185, topPos + 4,
                 69, 11,
                 Component.literal("Item name"));
 
         addRenderableWidget(new ScrollableInventoryButton(leftPos + 172, topPos + 83, 4, 11, getMenu()));
         addRenderableWidget(editBox);
+        addRenderableWidget(new ScrollableArrowInventoryButton(
+                leftPos + 171, topPos + 72, 6, 8,
+                (button) -> getMenu().clickMenuButton(null, ROW_UP_SCROLL),
+                true));
+        addRenderableWidget(new ScrollableArrowInventoryButton(
+                leftPos + 171, topPos + 97, 6, 8,
+                (button) -> getMenu().clickMenuButton(null, ROW_DOWN_SCROLL),
+                false));
+
         editBox.setVisible(showSearchScreen);
+        changeSlotVisibility(startIndex, endIndex);
 
         addWidget(Button.builder(Component.empty(), (button) -> {
-            int extraSlotSize = ServerConfig.DEFAULT_ROW_SIZE.get() * 9;
-            int startIndex = InventoryData.getExtraInvSlotStart() + extraSlotSize;
-            int endIndex = startIndex + 15;
             showSearchScreen = !showSearchScreen;
 
             changeSlotVisibility(startIndex, endIndex);
@@ -79,7 +89,7 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
         super.mouseClicked(x, y, clickType);
         isSearching = editBox.isMouseOver(x, y);
 
-        if(!editBox.mouseClicked(x, y, clickType)) {
+        if (!editBox.mouseClicked(x, y, clickType)) {
             clearWidgets();
             init();
         }
@@ -89,8 +99,8 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
 
     @Override
     public boolean keyPressed(int keyInt, int p_97766_, int p_97767_) {
-        if(isSearching){
-            if(keyInt == DELETE_KEY && editBox.getValue().length() > 0){
+        if (isSearching) {
+            if (keyInt == DELETE_KEY && editBox.getValue().length() > 0) {
                 editBox.setValue(editBox.getValue().substring(0, editBox.getValue().length() - 1));
             }
 
@@ -116,15 +126,15 @@ public abstract class MixinInventoryScreen extends EffectRenderingInventoryScree
         return showSearchScreen ? new ResourceLocation(MODID, "textures/gui/container/inventory.png") : new ResourceLocation(MODID, "textures/gui/container/closed_inventory.png");
     }
 
-    private void changeSlotVisibility(int slotStart, int slotEnd){
+    private void changeSlotVisibility(int slotStart, int slotEnd) {
         // In case that the button is hidden, change visibility of extraArmorSlots to notActive
         if (minecraft != null && minecraft.player != null) {
             NonNullList<Slot> slots = minecraft.player.inventoryMenu.slots;
 
-            for(int slotIndex = slotStart; slotIndex < slotEnd; slotIndex++){
+            for (int slotIndex = slotStart; slotIndex < slotEnd; slotIndex++) {
                 Slot slot = slots.get(slotIndex);
 
-                if(slot instanceof SearchSlot searchSlot){
+                if (slot instanceof SearchSlot searchSlot) {
                     searchSlot.setAvailable(showSearchScreen);
                 }
             }

@@ -1,6 +1,14 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "advancedinventory:item/capture_mob"
-  }
+    "layer0": "advancedinventory:item/capture_mob_empty"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "advancedinventory:mob_captured": 1
+      },
+      "model": "advancedinventory:item/capture_mob_filled"
+    }
+  ]
 }
