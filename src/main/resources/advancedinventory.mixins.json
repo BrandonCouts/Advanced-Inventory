@@ -6,13 +6,14 @@
   "refmap": "advancedinventory.refmap.json",
   "mixins": [
     "inventory.ContainerMixin",
-    "inventory.SlotMixin",
+    "inventory.FriendlyByteBufMixin",
     "inventory.ItemEntityMixin",
     "inventory.ItemStackHandlerMixin",
     "inventory.ItemStackMixin",
-    "inventory.ServerGamePacketListenerImplMixin",
     "inventory.MixinInventoryContainer",
-    "inventory.MixinInventoryMenu"
+    "inventory.MixinInventoryMenu",
+    "inventory.ServerGamePacketListenerImplMixin",
+    "inventory.SlotMixin"
   ],
   "client": [
     "inventory.MixinInventoryScreen",
