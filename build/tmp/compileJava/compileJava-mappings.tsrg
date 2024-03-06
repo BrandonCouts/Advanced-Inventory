@@ -1,3 +1,4 @@
+dev/zanckor/advancedinventory/mixin/inventory/BucketMixin content f_40687_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer compartments f_35979_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer items f_35974_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryContainer armor f_35975_
@@ -8,6 +9,8 @@ dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu owner f_39703_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen xMouse f_98831_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryScreen yMouse f_98832_
 dev/zanckor/advancedinventory/mixin/inventory/TextItemRendererMixin pose f_279612_
+dev/zanckor/advancedinventory/mixin/inventory/BucketMixin checkExtraContent (Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/core/BlockPos;)V m_142131_
+dev/zanckor/advancedinventory/mixin/inventory/BucketMixin use (Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder; m_7203_
 dev/zanckor/advancedinventory/mixin/inventory/ContainerMixin getMaxStackSize ()I m_6893_
 dev/zanckor/advancedinventory/mixin/inventory/MixinInventoryMenu slotsChanged (Lnet/minecraft/world/Container;)V m_6199_
 dev/zanckor/advancedinventory/mixin/inventory/SlotMixin getMaxStackSize ()I m_6641_

@@ -21,6 +21,7 @@ public class SlotIncreaser extends Item {
         Player player = context.getPlayer();
 
         if (player != null) {
+
             // Change the next 9 slots to be extra inventory slots
             for (int slotIndex = InventoryData.getExtraInvSlotEnd(player); slotIndex < InventoryData.getExtraInvSlotEnd(player) + 9; slotIndex++) {
                 if(player.containerMenu.slots.get(slotIndex) instanceof AvailableSlot slot) {

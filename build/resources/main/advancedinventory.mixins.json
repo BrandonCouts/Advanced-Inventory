@@ -5,8 +5,8 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "advancedinventory.refmap.json",
   "mixins": [
+    "inventory.BucketMixin",
     "inventory.ContainerMixin",
-    "inventory.FriendlyByteBufMixin",
     "inventory.ItemEntityMixin",
     "inventory.ItemStackHandlerMixin",
     "inventory.ItemStackMixin",

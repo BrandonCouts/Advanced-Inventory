@@ -1,17 +1,11 @@
 package dev.zanckor.advancedinventory.core.event;
 
-import com.mojang.serialization.JsonOps;
-import dev.zanckor.advancedinventory.core.data.AddLootModifier;
 import dev.zanckor.advancedinventory.core.data.capability.PlayerInventoryDataProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.GameRules;
-import net.minecraft.world.level.storage.loot.LootPool;
-import net.minecraft.world.level.storage.loot.predicates.LootItemConditions;
-import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
-import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -28,8 +22,28 @@ public class CapabilityEvent {
         e.addCapability(new ResourceLocation(PLAYER_DATA_CAPABILITY), capability);
     }
 
+    @SubscribeEvent
+    public static void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent e) {
+        Player player = e.getEntity();
 
-    @SubscribeEvent @SuppressWarnings("all")
+        player.getCapability(PlayerInventoryDataProvider.PLAYER_DATA_CAPABILITY).ifPresent(store -> {
+            if (store.getInventory() != null)
+                store.getInventory().deserializeNBT(player.getPersistentData().getCompound("inventory"));
+        });
+    }
+
+    @SubscribeEvent
+    public static void onPlayerLeave(PlayerEvent.PlayerLoggedOutEvent e) {
+        Player player = e.getEntity();
+
+        player.getCapability(PlayerInventoryDataProvider.PLAYER_DATA_CAPABILITY).ifPresent(store -> {
+            if (store.getInventory() != null)
+                player.getPersistentData().put("inventory", store.getInventory().serializeNBT());
+        });
+    }
+
+    @SubscribeEvent
+    @SuppressWarnings("all")
     public static void onPlayerCloned(PlayerEvent.Clone e) {
         Player player = e.getEntity();
 
@@ -46,7 +60,7 @@ public class CapabilityEvent {
     }
 
     public static void keepInventory(boolean keepInventory, Player player, Player oldPlayer) {
-        if(!keepInventory) return;
+        if (!keepInventory) return;
 
         player.containerMenu.slots.forEach(slot -> {
             slot.set(oldPlayer.getInventory().getItem(slot.getSlotIndex()));

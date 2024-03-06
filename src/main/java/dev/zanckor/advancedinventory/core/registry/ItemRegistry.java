@@ -3,6 +3,7 @@ package dev.zanckor.advancedinventory.core.registry;
 import dev.zanckor.advancedinventory.core.item.CaptureMobItem;
 import dev.zanckor.advancedinventory.core.item.SlotIncreaser;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;

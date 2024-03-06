@@ -4,9 +4,14 @@ import dev.zanckor.advancedinventory.core.registry.ItemRegistry;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.Unit;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.memory.MemoryModuleType;
+import net.minecraft.world.entity.monster.warden.Warden;
+import net.minecraft.world.entity.monster.warden.WardenAi;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
@@ -33,6 +38,7 @@ public class CaptureMobItem extends Item {
             entity.load(stack.getOrCreateTagElement("entity").getCompound("EntityTag"));
             entity.moveTo(pos.getX(), pos.getY() + 1, pos.getZ());
             context.getLevel().addFreshEntity(entity);
+            customLogic(entity);
 
             stack.getOrCreateTagElement("entity").remove("EntityTag");
         }
@@ -46,8 +52,7 @@ public class CaptureMobItem extends Item {
             return false;
         }
 
-
-
+        //Remove the entity from the world and decrease the item count
         entity.remove(Entity.RemovalReason.DISCARDED);
         player.getMainHandItem().setCount(player.getMainHandItem().getCount() - 1);
 
@@ -71,6 +76,17 @@ public class CaptureMobItem extends Item {
         }
 
         super.appendHoverText(itemStack, level, components, tooltipFlag);
+    }
+
+    /**
+     * Depending on the type of entity, you can add custom logic here
+     */
+    private void customLogic(Entity entity){
+        if(entity.getType() == EntityType.WARDEN) {
+            WardenAi.setDigCooldown((LivingEntity) entity);
+
+            ((Warden) entity).getBrain().setMemoryWithExpiry(MemoryModuleType.DIG_COOLDOWN, Unit.INSTANCE, 1200L);
+        }
     }
 
     @Override
