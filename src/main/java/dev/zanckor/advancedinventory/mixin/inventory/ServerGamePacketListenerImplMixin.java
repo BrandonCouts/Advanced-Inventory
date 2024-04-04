@@ -6,6 +6,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
+import java.util.Objects;
+
 /*
  * This mixin has been modified from the original version.
  * The original version can be found here: https://codeberg.org/PORTB/BiggerStacks/src/branch/1.18/src/main/java/portb/biggerstacks/mixin/vanilla/stacksize/ServerGamePacketListenerImplMixin.java
@@ -13,6 +15,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(ServerGamePacketListenerImpl.class)
 public class ServerGamePacketListenerImplMixin {
+
     /**
      * Removes the hard coded limit to disallow giving more than 64 items in creative mode.
      */

@@ -47,7 +47,7 @@ public abstract class MixinInventoryMenu extends RecipeBookMenu<CraftingContaine
     @Inject(method = "<init>", at = @At("TAIL"))
     public void constructor(Inventory inventory, boolean bl, Player player, CallbackInfo ci) {
         int startIndexHotbar = InventoryData.getExtraInvSlotStart() - 9;
-        int extraSlotSize = ServerConfig.DEFAULT_ROW_SIZE.get() * 9;
+        int extraSlotSize = ServerConfig.LIMIT_ROWS.get() * 9;
 
         for (int extraHotbarSlot = 0; extraHotbarSlot < 9; ++extraHotbarSlot) {
             int xPos = 8 + extraHotbarSlot * 18;
@@ -57,7 +57,7 @@ public abstract class MixinInventoryMenu extends RecipeBookMenu<CraftingContaine
         }
 
         for (int slot = 0; slot < extraSlotSize; ++slot) {
-            boolean isAvailable = slot < ServerConfig.DEFAULT_ROW_SIZE.get();
+            boolean isAvailable = slot < ServerConfig.LIMIT_ROWS.get();
             int slotIndex = InventoryData.getExtraInvSlotStart() + slot;
             AvailableSlot availableSlot = new AvailableSlot(inventory, slotIndex, -1000000, -1000000, isAvailable, player);
 
