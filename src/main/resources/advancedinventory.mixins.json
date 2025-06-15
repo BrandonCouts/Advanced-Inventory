@@ -13,6 +13,7 @@
     "inventory.SlotMixin"
   ],
   "client": [
+    "inventory.InventoryScreenTextureFixMixin"
   ],
   "injectors": {
     "defaultRequire": 1
