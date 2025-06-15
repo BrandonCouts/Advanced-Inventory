@@ -2,6 +2,7 @@ package dev.zanckor.advancedinventory.mixin.inventory;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.Font;
+import dev.zanckor.advancedinventory.core.config.ClientConfig;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemStack;
@@ -33,6 +34,8 @@ public abstract class TextItemRendererMixin {
 
     @Inject(method = "renderItemDecorations(Lnet/minecraft/client/gui/Font;Lnet/minecraft/world/item/ItemStack;IILjava/lang/String;)V", at = @At("HEAD"), cancellable = true)
     public void renderItemDecorations(Font font, ItemStack itemStack, int p_282641_, int p_282146_, @Nullable String s, CallbackInfo ci) {
+        if (!ClientConfig.ENABLE_RENDER_COUNT.get())
+            return;
         var value = itemStack.getCount();
 
         String formattedInt = value > 1 ? String.valueOf(value) : "";

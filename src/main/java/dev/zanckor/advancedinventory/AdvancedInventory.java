@@ -3,6 +3,7 @@ package dev.zanckor.advancedinventory;
 import com.mojang.logging.LogUtils;
 import dev.zanckor.advancedinventory.common.network.NetworkHandler;
 import dev.zanckor.advancedinventory.core.config.ServerConfig;
+import dev.zanckor.advancedinventory.core.config.ClientConfig;
 import dev.zanckor.advancedinventory.core.registry.ItemRegistry;
 import dev.zanckor.advancedinventory.core.registry.LootModifierRegistry;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -20,6 +21,7 @@ import org.slf4j.Logger;
 import static dev.zanckor.advancedinventory.AdvancedInventory.LOGGER;
 import static dev.zanckor.advancedinventory.AdvancedInventory.MODID;
 import static net.minecraftforge.fml.config.ModConfig.Type.SERVER;
+import static net.minecraftforge.fml.config.ModConfig.Type.CLIENT;
 
 
 @Mod(MODID)
@@ -44,5 +46,6 @@ public class AdvancedInventory {
 
         LOGGER.info("Registering config for AdvancedInventory");
         ModLoadingContext.get().registerConfig(SERVER, ServerConfig.spec, "advancedinventory-server.toml");
+        ModLoadingContext.get().registerConfig(CLIENT, ClientConfig.spec, "advancedinventory-client.toml");
     }
 }
