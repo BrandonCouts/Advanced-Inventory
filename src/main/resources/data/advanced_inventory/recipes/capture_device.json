@@ -24,7 +24,7 @@
     }
   },
   "result": {
-    "item": "advancedinventory:capture_mob",
+    "item": "advanced_inventory:capture_mob",
     "count": 1
   },
   "conditions": [

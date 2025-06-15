@@ -19,7 +19,7 @@ group = 'dev.zanckor'
 version = '1.1.5'
 
 java {
-    archivesBaseName = 'advancedinventory'
+    archivesBaseName = 'advanced_inventory'
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
@@ -62,10 +62,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
                         // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'advancedinventory'
+            property 'forge.enabledGameTestNamespaces', 'advanced_inventory'
 
             mods {
-                advancedinventory {
+                advanced_inventory {
                     source sourceSets.main
                 }
             }
@@ -78,10 +78,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-                        property 'forge.enabledGameTestNamespaces', 'advancedinventory'
+                        property 'forge.enabledGameTestNamespaces', 'advanced_inventory'
 
             mods {
-                advancedinventory {
+                advanced_inventory {
                     source sourceSets.main
                 }
             }
@@ -97,10 +97,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            property 'forge.enabledGameTestNamespaces', 'advancedinventory'
+            property 'forge.enabledGameTestNamespaces', 'advanced_inventory'
 
             mods {
-                advancedinventory {
+                advanced_inventory {
                     source sourceSets.main
                 }
             }
@@ -114,10 +114,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'advancedinventory', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'advanced_inventory', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                advancedinventory {
+                advanced_inventory {
                     source sourceSets.main
                 }
             }
@@ -147,7 +147,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "advancedinventory",
+                "Specification-Title": "advanced_inventory",
                             "Specification-Vendor": "Zanckor, Arcane Studios",
                             "Specification-Version": "1", // We are version 1 of ourselves
                 "Implementation-Title": project.name,

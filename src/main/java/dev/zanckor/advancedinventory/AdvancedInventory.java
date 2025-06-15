@@ -26,7 +26,7 @@ import static net.minecraftforge.fml.config.ModConfig.Type.CLIENT;
 
 @Mod(MODID)
 public class AdvancedInventory {
-    public static final String MODID = "advancedinventory";
+    public static final String MODID = "advanced_inventory";
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public AdvancedInventory() {
